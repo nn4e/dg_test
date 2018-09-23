@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/Detector.js"></script>
     <script src="js/stats.min.js"></script>
-
+    <script src="js/socket.io.js"></script>
 </head>
 
 <body>
@@ -22,6 +22,7 @@
         var camera, scene, renderer;
         var raycaster, mouse;
         var mesh, line;
+        var socket = io('https://lisgames.ru/wsapp/');
         init();
         animate();
 
