@@ -22,11 +22,12 @@
         var camera, scene, renderer;
         var raycaster, mouse;
         var mesh, line;
-        var socket = io('https://lisgames.ru/wsapp/');
+        var socket = io('https://lisgames.ru/');
         init();
         animate();
 
         function init() {
+            socket.emit('test', 'test');
             container = document.getElementById('container');
             //
             camera = new THREE.PerspectiveCamera(27, window.innerWidth / window.innerHeight, 1, 3500);
@@ -152,6 +153,7 @@
             //
             window.addEventListener('resize', onWindowResize, false);
             document.addEventListener('mousemove', onDocumentMouseMove, false);
+
         }
 
         function onWindowResize() {
